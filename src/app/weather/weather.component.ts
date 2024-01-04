@@ -24,7 +24,6 @@ export class WeatherComponent implements OnInit {
     this.WeatherService.getweather(this.city, this.units).subscribe({
       next: (res) => {
         this.myWeather = res
-        console.log(this.myWeather)
         this.temperature = Math.floor(this.myWeather.main.temp)
         this.feelsLikeTemp = Math.floor(this.myWeather.main.feels_like)
         this.humidity = this.myWeather.main.humidity
